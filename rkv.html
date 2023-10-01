@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravan ka Vadh - Srinagar Utsav Committee</title>
+    <style>
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #f44336; /* Red */
+        }
+
+        h2 {
+            color: #009688; /* Green */
+        }
+
+        /* Time ticker styles */
+        #ticker {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2196F3; /* Blue */
+        }
+
+        /* Section styles */
+        .section {
+            margin-bottom: 20px;
+        }
+
+        /* Download button styles */
+        .download-btn {
+            background-color: #4CAF50; /* Green */
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Note section styles */
+        .note {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ravan ka Vadh</h1>
+        <p>Organized by Srinagar Utsav Committee</p>
+        
+        <!-- Time ticker -->
+        <div id="ticker"></div>
+        
+        <!-- Sections -->
+        <div class="section">
+            <h2>VIP Members/Contributors</h2>
+            <ul>
+                <li>Khaja Pasha</li>
+                <li>Amer</li>
+				<li>Aman</li>
+                <li>Ayaan</li>
+				<li>Yeshwanth</li>
+                <li>Chotu</li>
+                <!-- Add more names here -->
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Mahila Mandali - Girl Contribution</h2>
+            <p>Girls who contributed:</p>
+            <ul>
+                <li>Arshiya</li>
+                <li>Aliya</li>
+                <!-- Add more names here -->
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Project Status</h2>
+            <p>Structure being built...</p>
+        </div>
+        
+        <div class="section">
+            <h2>Get Your Viewer Pass</h2>
+            <a href="bot_pass.jpeg" download class="download-btn">Download Viewer Pass</a>
+        </div>
+        
+        <div class="section">
+            <h2>The Lighter</h2>
+            <p>Discussion ongoing now. Will be finalized by 5pm October 2nd</p>
+        </div>
+        
+        <div class="section">
+            <h2>Guidelines/Rules</h2>
+            <p>
+			<ul>
+                <li>The event celebrates Dussehra on Gandhi Jayanti, symbolizing the triumph of good over evil, paying tribute to the legacy of Mahatma Gandhi.</li>
+                <li>This event is designed for small children to enjoy the festivities.</li>
+				<li>Please be aware that the event may involve the use of mild explosives during the symbolic burning of the Ravana statue.</li>
+				<li>We strongly advise parents or guardians to accompany children to ensure their safety and enjoyment.</li>
+				<li>Refreshments will not be provided at the event. Kindly bring your own snacks and beverages for yourself and your children.</li>
+				<li>All attendees must possess valid passes for entry. Our security personnel will verify passes at the entrance.</li>
+				<li>Help us make this event memorable by spreading the word among friends and family. Your participation is vital in creating a special experience for everyone.</li>
+                <!-- Add more names here -->
+            </ul>
+			</p>
+        </div>
+        
+        <div class="section">
+            <h2>Chairman's Note</h2>
+            <div class="note">
+                <p>Dear Attendees,<br><br>
+
+Thank you for joining us on this special occasion. Your presence adds meaning to our celebration. Let's embrace the spirit of unity and cherish the triumph of good over evil.
+<br><br>
+Warm regards,<br>
+Khaja Pasha</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for the time ticker
+        // JavaScript for the time ticker
+function updateTicker() {
+    const now = new Date();
+    const tomorrow = new Date(now);
+    tomorrow.setDate(now.getDate() + 1);
+    tomorrow.setHours(19, 0, 0, 0); // Set the time to tomorrow's 7:00 PM IST
+
+    const timeRemaining = tomorrow - now;
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+    document.getElementById("ticker").innerHTML = `Time left: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
+updateTicker(); // Initial call to update the ticker
+setInterval(updateTicker, 1000); // Update the ticker every second
+
+
+        setInterval(updateTicker, 1000); // Update the ticker every second
+    </script>
+</body>
+</html>
+
+					
